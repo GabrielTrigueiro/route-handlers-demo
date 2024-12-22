@@ -1,4 +1,3 @@
-import { text } from "stream/consumers";
 import { comments } from "./data";
 
 export async function GET() {
