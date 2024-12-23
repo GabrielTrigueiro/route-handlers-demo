@@ -7,5 +7,10 @@ export async function GET(request: NextRequest) {
   // ? Duas formas de pegar o header de uma requisição
   console.log(requestHeaders.get("authorization"));
   console.log(headerList);
-  return new Response("Hello from the API");
+  // ? Dá pra mandar uma página html como resposta
+  return new Response("<h1>Hello from the API</h1>", {
+    headers: {
+      "content-type": "text/html",
+    },
+  });
 }
